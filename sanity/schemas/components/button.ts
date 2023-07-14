@@ -1,16 +1,18 @@
 import { defineField, defineType } from 'sanity'
 
-export const cta = defineType({
-	name: 'cta',
+export const button = defineType({
+	name: 'button',
 	title: 'Call to action',
 	type: 'object',
 	fields: [
 		defineField({
-			name: 'title',
+			name: 'text',
+			title: 'Text',
 			type: 'string',
 		}),
 		defineField({
 			name: 'link',
+			title: 'Link',
 			type: 'url',
 		}),
 	],

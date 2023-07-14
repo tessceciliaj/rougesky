@@ -1,7 +1,7 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export const hero = defineType({
-	name: 'hero',
+	name: 'hero_section',
 	title: 'Hero section',
 	type: 'object',
 	fields: [
@@ -20,8 +20,8 @@ export const hero = defineType({
 			type: 'array',
 			of: [
 				defineArrayMember({
-					name: 'cta',
-					type: 'cta',
+					name: 'button',
+					type: 'button',
 				}),
 			],
 		}),

@@ -1,4 +1,4 @@
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const homepage = defineType({
 	name: 'homepage',
@@ -8,22 +8,32 @@ export const homepage = defineType({
 		defineField({
 			name: 'hero',
 			title: 'Hero section',
-			type: 'hero',
+			type: 'hero_section',
 		}),
-		// defineField({
-		// 	name: 'pageBuilder',
-		// 	title: 'Page Builder',
-		// 	type: 'array',
-		// 	of: [
-		// 		defineArrayMember({
-		// 			name: 'bigText',
-		// 			type: 'bigText',
-		// 		}),
-		// 		defineArrayMember({
-		// 			name: 'video',
-		// 			type: 'video',
-		// 		}),
-		// 	],
-		// }),
+		defineField({
+			name: 'trailer',
+			title: 'Trailer section',
+			type: 'trailer_section',
+		}),
+		defineField({
+			name: 'description',
+			title: 'Description section',
+			type: 'description_section',
+		}),
+		defineField({
+			name: 'character',
+			title: 'Character section',
+			type: 'character_section',
+		}),
+		defineField({
+			name: 'newsletter',
+			title: 'Newsletter section',
+			type: 'newsletter_section',
+		}),
+		defineField({
+			name: 'call_to_action_section',
+			title: 'Call to action section',
+			type: 'call_to_action_section',
+		}),
 	],
 })
