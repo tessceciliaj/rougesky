@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Trailer from '@/components/Trailer'
+import GameInfo from '@/components/GameInfo'
 import demoPicture from '@/public/picture.jpg'
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Hero backgroundImage={demoPicture} />
       <Trailer />
+      <GameInfo />
     </main>
   )
 }

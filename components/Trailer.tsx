@@ -28,7 +28,7 @@ const Trailer = () => {
         videoId='FncHhkiWjDA'
         opts={opts}
         onReady={onPlayerReady}
-        className='flex flex-col justify-center w-screen md:px-24'
+        className='flex flex-col justify-center w-screen md:px-12'
       />
     </>
   )
