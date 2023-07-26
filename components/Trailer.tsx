@@ -9,7 +9,7 @@ const Trailer = () => {
   }
 
   const opts: YouTubeProps['opts'] = {
-    height: '390',
+    height: '100%',
     width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
@@ -28,7 +28,7 @@ const Trailer = () => {
         videoId='FncHhkiWjDA'
         opts={opts}
         onReady={onPlayerReady}
-        className='flex flex-col justify-center w-screen md:px-12'
+        className='flex flex-col justify-center w-full aspect-video md:px-12 max-h-[calc(100vh-4rem)]'
       />
     </>
   )
