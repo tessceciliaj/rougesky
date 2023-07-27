@@ -1,39 +1,39 @@
 import { defineField, defineType } from 'sanity'
 
 export const homepage = defineType({
-	name: 'homepage',
-	title: 'Homepage',
-	type: 'document',
-	fields: [
-		defineField({
-			name: 'hero',
-			title: 'Hero section',
-			type: 'hero_section',
-		}),
-		defineField({
-			name: 'trailer',
-			title: 'Trailer section',
-			type: 'trailer_section',
-		}),
-		defineField({
-			name: 'description',
-			title: 'Description section',
-			type: 'description_section',
-		}),
-		defineField({
-			name: 'character',
-			title: 'Character section',
-			type: 'character_section',
-		}),
-		defineField({
-			name: 'newsletter',
-			title: 'Newsletter section',
-			type: 'newsletter_section',
-		}),
-		defineField({
-			name: 'call_to_action_section',
-			title: 'Call to action section',
-			type: 'call_to_action_section',
-		}),
-	],
+  name: 'homepage',
+  title: 'Homepage',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'hero',
+      title: 'Hero section',
+      type: 'hero_section',
+    }),
+    defineField({
+      name: 'trailer',
+      title: 'Trailer section',
+      type: 'trailer_section',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description section',
+      type: 'description_section',
+    }),
+    defineField({
+      name: 'character',
+      title: 'Character section',
+      type: 'character_section',
+    }),
+    defineField({
+      name: 'newsletter',
+      title: 'Newsletter section',
+      type: 'newsletter_section',
+    }),
+    defineField({
+      name: 'promotion',
+      title: 'Promotion section',
+      type: 'promotion_section',
+    }),
+  ],
 })

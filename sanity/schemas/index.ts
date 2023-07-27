@@ -4,16 +4,16 @@ import { trailer } from './sections/trailer'
 import { description } from './sections/description'
 import { character } from './sections/character'
 import { newsletter } from './sections/newsletter'
-import { callToAction } from './sections/callToAction'
+import { promotion } from './sections/promotion'
 import { button } from './components/button'
 
 export const schema = [
-	homepage,
-	hero,
-	trailer,
-	description,
-	character,
-	newsletter,
-	callToAction,
-	button,
+  homepage,
+  hero,
+  trailer,
+  description,
+  character,
+  newsletter,
+  promotion,
+  button,
 ]
