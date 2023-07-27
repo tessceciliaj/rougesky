@@ -9,9 +9,9 @@
 }
 
 .rotateBtn {
-    @apply hover:rotate-180 transition duration-300
+  @apply hover:rotate-180 transition duration-300;
 }
 
 .sectionTitle {
-  @apply text-base md:text-xl font-bold text-lightColor text-center pb-6 pt-12 px-6 md:px-24 md:pt-24 md:pb-12
+  @apply text-base md:text-xl font-bold text-lightColor text-center pb-6 pt-12 px-6 md:px-24 md:pt-24 md:pb-12;
 }
