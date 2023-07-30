@@ -4,6 +4,7 @@ import Trailer from '@/components/Trailer'
 import GameInfo from '@/components/GameInfo'
 import MeetTheCharacter from '@/components/MeetTheCharacter'
 import EmailInput from '@/components/EmailInput'
+import Promotion from '@/components/Promotion'
 import demoPicture from '@/public/picture.jpg'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <GameInfo />
       <MeetTheCharacter />
       <EmailInput />
+      <Promotion />
     </main>
   )
 }

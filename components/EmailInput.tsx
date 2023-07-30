@@ -2,7 +2,7 @@ import React from 'react'
 
 const EmailInput = () => {
   return (
-    <section className='w-[80%] max-w-[1075px]'>
+    <section className='w-[80%] max-w-[1075px] pb-24'>
       <h2 className='sectionTitle'>Stay in the loop!</h2>
       <p className='text-lightColor text-center pb-8'>
         Join our newsletter to get exclusive insight into the game and updates,
