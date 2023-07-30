@@ -19,8 +19,15 @@ const MeetTheCharacter = () => {
   }
 
   return (
-    <section className='flex flex-col items-center'>
-      <h2 className='sectionTitle'>Meet the Character!</h2>
+    <section className='flex flex-col items-center w-[80%]'>
+      <h2 className='sectionTitle'>Pick your pilot:</h2>
+      <p className='text-lightColor text-center pb-4'>
+        Enlist a diverse crew of pilots, each bringing a unique aircraft and set
+        of abilities to your squadron, making every flight experience
+        distinctively engaging and different. Uncover their past and fix their
+        future as you collect and combine weapons and upgrades into godlike
+        synergies in the sky.{' '}
+      </p>
       <div className='flex flex-wrap gap-4 justify-center w-full'>
         {characters.map((character, index) => (
           <div key={index} className='relative'>

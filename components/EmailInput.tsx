@@ -2,13 +2,14 @@ import React from 'react'
 
 const EmailInput = () => {
   return (
-    <section className='w-[80%] max-w-[1075px] pb-24'>
-      <h2 className='sectionTitle'>Stay in the loop!</h2>
+    <section className='w-[80%] max-w-[1075px] pb-24 pt-4'>
+      <h2 className='sectionTitle animate-bounce'>Stay in the loop!</h2>
       <p className='text-lightColor text-center pb-8'>
         Join our newsletter to get exclusive insight into the game and updates,
-        betas. Secrets to become a <span className='text-accentColor font-bold'>god in the sky.</span>
+        betas. Secrets to become a{' '}
+        <span className='text-accentColor font-bold'>god in the sky.</span>
       </p>
-      <form className=' m-auto'>
+      <form className='w-full'>
         <label
           htmlFor='email'
           className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'>

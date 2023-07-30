@@ -4,11 +4,11 @@ import picture from '@/public/picture.jpg'
 
 const GameInfo = () => {
   return (
-    <div className='flex flex-col'>
+    <section className='flex flex-col justify-center items-center min-h-screen'>
       <h2 className='sectionTitle'>
         A 2D aerial action rogue-lite like never before
       </h2>
-      <div className='flex flex-wrap gap-4 justify-center w-full text-lightColor'>
+      <div className='flex flex-wrap gap-4 justify-center w-full  text-lightColor'>
         <div className='flex flex-col w-80'>
           <Image
             src={picture}
@@ -55,7 +55,7 @@ const GameInfo = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
