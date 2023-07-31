@@ -20,7 +20,7 @@ const EmailInput = () => {
           <input
             type='email'
             id='email'
-            className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-accentColor focus:border-accentColor dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white'
+            className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-accentColor focus:border-accentColor'
             placeholder='Your Email'
             required
           />
