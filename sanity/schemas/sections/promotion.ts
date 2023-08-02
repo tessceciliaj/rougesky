@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
-export const newsletter = defineType({
-  name: 'newsletter_section',
-  title: 'Newsletter section',
+export const promotion = defineType({
+  name: 'promotion_section',
+  title: 'Promotion section',
   type: 'object',
   fields: [
     defineField({
@@ -12,10 +12,9 @@ export const newsletter = defineType({
       validation: rule => rule.required(),
     }),
     defineField({
-      name: 'desc',
-      title: 'Description',
-      type: 'array',
-      of: [{ type: 'block' }],
+      name: 'button',
+      title: 'Button',
+      type: 'button',
       validation: rule => rule.required(),
     }),
   ],
