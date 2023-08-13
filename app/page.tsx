@@ -22,9 +22,9 @@ const Home = async () => {
       </h1>
       {content.trailer && <Trailer content={content.trailer} />}
       {content.description && <Description content={content.description} />}
-      <MeetTheCharacter />
-      <EmailInput />
-      <Promotion />
+      {content.character && <MeetTheCharacter content={content.character} />}
+      {content.newsletter && <EmailInput content={content.newsletter} />}
+      {content.promotion && <Promotion content={content.promotion} />}
       <Footer />
     </main>
   )

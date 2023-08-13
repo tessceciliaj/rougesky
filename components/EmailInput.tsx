@@ -1,14 +1,13 @@
-import React from 'react'
+import { PortableText } from '@portabletext/react'
+import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 
-const EmailInput = () => {
+const EmailInput = ({ content }: { content: NewsletterProps }) => {
   return (
     <section className='w-[80%] max-w-[1075px] pb-24 pt-4'>
-      <h2 className='sectionTitle animate-bounce'>Stay in the loop!</h2>
-      <p className='text-lightColor text-center pb-8'>
-        Join our newsletter to get exclusive insight into the game and updates,
-        betas. Secrets to become a{' '}
-        <span className='text-accentColor font-bold'>god in the sky.</span>
-      </p>
+      <h2 className='sectionTitle animate-bounce'>{content.title}</h2>
+      <div className='text-lightColor text-center pb-8'>
+        <PortableText value={content.desc} />
+      </div>
       <form className='w-full'>
         <label
           htmlFor='email'

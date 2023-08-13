@@ -1,18 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
-import demoPicture from '@/public/picture.jpg'
+import { urlForImage } from '@/sanity/lib/image'
+import type { Character as CharacterProps } from '@/sanity/types/homepage'
 
-const MeetTheCharacter = () => {
+const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
   const [activeCharacter, setActiveCharacter] = useState(1)
-
-  const characters = [
-    { name: 'Josie the Pilot', description: 'Description for Josie...' },
-    { name: 'There the Pilot', description: 'Description for There...' },
-    { name: 'Ella the Pilot', description: 'Description for Ella...' },
-  ]
-
-  console.log(activeCharacter)
 
   const handleCharacterClick = (index: number) => {
     setActiveCharacter(index)
@@ -21,22 +14,15 @@ const MeetTheCharacter = () => {
   return (
     <section className='flex flex-col items-center w-[80%]'>
       <h2 className='sectionTitle'>Pick your pilot:</h2>
-      <p className='text-lightColor text-center pb-4'>
-        Enlist a diverse crew of pilots, each bringing a unique aircraft and set
-        of abilities to your squadron, making every flight experience
-        distinctively engaging and different. Uncover their past and fix their
-        future as you collect and combine weapons and upgrades into godlike
-        synergies in the sky.{' '}
-      </p>
+      <p className='text-lightColor text-center pb-4'>{content.title}</p>
       <div className='flex flex-wrap gap-4 justify-center w-full'>
-        {characters.map((character, index) => (
+        {content.characters.map((character, index) => (
           <div key={index} className='relative'>
             <Image
-              src={demoPicture}
+              src={urlForImage(character.image).url()}
               alt={character.name}
               width={350}
               height={200}
-              className=''
             />
             <div
               className={`inset-0 cursor-pointer absolute ${
@@ -52,9 +38,9 @@ const MeetTheCharacter = () => {
           </div>
         ))}
       </div>
-      <p className='text-lightColor w-1/3 text-center p-4'>
+      {/* <p className='text-lightColor w-1/3 text-center p-4'>
         {characters[activeCharacter].description}
-      </p>
+      </p> */}
     </section>
   )
 }
