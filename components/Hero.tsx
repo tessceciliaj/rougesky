@@ -22,7 +22,7 @@ const Hero = ({
       <div
         className='flex flex-col h-screen items-center justify-center w-full px-4'
         style={backgroundStyle}>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center justify-between h-screen pb-8 pt-[100px]'>
           <Image
             src={urlForImage(content.logo).url()}
             alt='company logo'
@@ -32,7 +32,7 @@ const Hero = ({
           />
           <div className='flex gap-2 justify-center'>
             {content.ctas.map((button, index) => {
-              const color = index % 2 === 0 ? 'bg-darkColor' : 'bg-darkGrey'
+              const color = index % 2 === 0 ? 'bg-darkColor' : 'bg-accentColor'
 
               return (
                 <Link

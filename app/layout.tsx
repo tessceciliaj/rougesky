@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
+import { VT323 } from 'next/font/google'
 
-const font = Raleway({ subsets: ['latin'] })
+const font = VT323({ subsets: ['latin'], weight: ['400'] })
 
 export const metadata: Metadata = {
 	title: 'RogueSky',
