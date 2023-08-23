@@ -21,7 +21,7 @@ const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
             <Image
               src={urlForImage(character.image).url()}
               alt={character.name}
-              width={350}
+              width={250}
               height={200}
             />
             <div

@@ -16,7 +16,7 @@ const Description = ({ content }: { content: DescriptionProps }) => {
               width={350}
               height={200}
               alt={card.image.alt}
-              className='rounded'
+              className='rounded h-[300px] object-cover'
             />
             <div className='pt-4'>
               <PortableText value={card.text} />

@@ -5,7 +5,7 @@
 /* Tailwind Styles */
 
 .mainBtn {
-  @apply inline-block rounded px-3 md:px-6 pb-2 pt-2.5 text-lg font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.8)] transition duration-300 ease-in-out hover:bg-lightOpacity hover:text-darkColor hover:font-bold hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.5),0_4px_18px_0_rgba(0,0,0,0.4)] focus:bg-lightOpacity focus:text-darkColor focus:font-bold focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-lightColor active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)];
+  @apply inline-block px-3 md:px-6 pb-2 pt-2 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.8)] transition duration-300 ease-in-out hover:bg-lightOpacity hover:text-darkColor hover:font-bold hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.5),0_4px_18px_0_rgba(0,0,0,0.4)] focus:bg-lightOpacity focus:text-darkColor focus:font-bold focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-lightColor active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)];
 }
 
 .rotateBtn {
@@ -13,5 +13,5 @@
 }
 
 .sectionTitle {
-  @apply text-base md:text-xl font-bold text-lightColor text-center pb-6 pt-12 px-6 md:px-24 md:pb-12;
+  @apply text-2xl md:text-4xl font-bold text-lightColor text-center pb-6 pt-12 px-6 md:px-24 md:pb-12;
 }
