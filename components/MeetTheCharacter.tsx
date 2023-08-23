@@ -12,9 +12,7 @@ const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
   }
 
   return (
-    <section className='flex flex-col items-center w-[80%]'>
-      <h2 className='sectionTitle'>Pick your pilot:</h2>
-      <p className='text-lightColor text-center pb-4'>{content.title}</p>
+    <section className='flex flex-col md:flex-row items-center w-[80%] pb-6 pt-12 px-6 md:px-24 md:pb-12'>
       <div className='flex flex-wrap gap-4 justify-center w-full'>
         {content.characters.map((character, index) => (
           <div key={index} className='relative'>
@@ -23,6 +21,7 @@ const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
               alt={character.name}
               width={250}
               height={200}
+              className='rounded h-[400px] object-cover'
             />
             <div
               className={`inset-0 cursor-pointer absolute ${
@@ -38,7 +37,12 @@ const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
           </div>
         ))}
       </div>
-      {/* <p className='text-lightColor w-1/3 text-center p-4'>
+      <h2 className='text-2xl md:text-4xl font-bold text-lightColor text-center'>
+        Pick your pilot:
+      </h2>
+      <p className='text-lightColor text-center pb-4 w-24'>{content.title}</p>
+
+      {/* {/* <p className='text-lightColor w-1/3 text-center p-4'>
         {characters[activeCharacter].description}
       </p> */}
     </section>

@@ -3,7 +3,7 @@ import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 
 const EmailInput = ({ content }: { content: NewsletterProps }) => {
   return (
-    <section className='w-full max-w-[1075px] pb-24 pt-4 bg-accentColor'>
+    <section className='w-full pb-24 pt-4 bg-accentColor'>
       <h2 className='sectionTitle animate-bounce'>{content.title}</h2>
       <div className='text-lightColor text-center pb-8'>
         <PortableText value={content.desc} />
