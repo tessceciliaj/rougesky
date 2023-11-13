@@ -26,8 +26,8 @@ const Hero = ({
           <Image
             src={urlForImage(content.logo).url()}
             alt='company logo'
-            width={24}
-            height={24}
+            width={350}
+            height={350}
             className='py-4'
           />
           <div className='flex gap-2 justify-center'>
