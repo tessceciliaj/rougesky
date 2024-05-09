@@ -1,8 +1,9 @@
 'use client'
+
 import YouTube, { YouTubeProps } from 'react-youtube'
 import type { Trailer as TrailerProps } from '@/sanity/types/homepage'
 
-const Trailer = ({ content }: { content: TrailerProps }) => {
+export const Trailer = ({ content }: { content: TrailerProps }) => {
   const videoId = new URL(content.url).searchParams.get('v') || undefined
 
   const opts: YouTubeProps['opts'] = {
@@ -28,5 +29,3 @@ const Trailer = ({ content }: { content: TrailerProps }) => {
     />
   )
 }
-
-export default Trailer

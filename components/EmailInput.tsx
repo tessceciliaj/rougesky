@@ -2,7 +2,7 @@ import { PortableText } from '@portabletext/react'
 import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 import Link from 'next/link'
 
-const EmailInput = ({ content }: { content: NewsletterProps }) => {
+export const EmailInput = ({ content }: { content: NewsletterProps }) => {
   return (
     <section className='w-full py-20 bg-[#00417D] mx-auto'>
       <div className='max-w-6xl flex flex-col items-center gap-6'>
@@ -17,5 +17,3 @@ const EmailInput = ({ content }: { content: NewsletterProps }) => {
     </section>
   )
 }
-
-export default EmailInput

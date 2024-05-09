@@ -1,6 +1,6 @@
 import { Twitter, Tiktok, Youtube, Discord, Steam } from 'react-bootstrap-icons'
 
-const Header = () => {
+export const Header = () => {
   return (
     <nav className='flex absolute justify-between w-full p-4 gap-6 bg-darkOpacity'>
       <div className='flex justify-center gap-6'>
@@ -26,5 +26,3 @@ const Header = () => {
     </nav>
   )
 }
-
-export default Header

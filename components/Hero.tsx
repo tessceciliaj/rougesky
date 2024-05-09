@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { urlForImage } from '@/sanity/lib/image'
 import type { Hero as HeroProps } from '@/sanity/types/homepage'
 
-const Hero = ({ content }: { content: HeroProps }) => {
+export const Hero = ({ content }: { content: HeroProps }) => {
   return (
     <div
       className='flex h-screen items-end justify-center gap-2 pb-8 w-full px-4 bg-cover bg-center'
@@ -24,5 +24,3 @@ const Hero = ({ content }: { content: HeroProps }) => {
     </div>
   )
 }
-
-export default Hero
