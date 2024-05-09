@@ -4,7 +4,7 @@ import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/sanity/lib/image'
 import type { Description as DescriptionProps } from '@/sanity/types/homepage'
 
-const Description = ({ content }: { content: DescriptionProps }) => {
+export const Description = ({ content }: { content: DescriptionProps }) => {
   return (
     <div className='flex flex-col px-8 text-center max-w-6xl'>
       <h2 className='sectionTitle'>{content.title}</h2>
@@ -31,5 +31,3 @@ const Description = ({ content }: { content: DescriptionProps }) => {
     </div>
   )
 }
-
-export default Description

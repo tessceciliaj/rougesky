@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowDown } from 'react-bootstrap-icons'
 import type { Promotion as PromotionProps } from '@/sanity/types/homepage'
 
-const Promotion = ({ content }: { content: PromotionProps }) => {
+export const Promotion = ({ content }: { content: PromotionProps }) => {
   return (
     <section className='bg-black w-full min-h-screen flex flex-col justify-center items-center'>
       <h2 className='text-base md:text-xl font-bold text-lightColor text-center pb-2 px-6 md:px-24'>
@@ -17,5 +17,3 @@ const Promotion = ({ content }: { content: PromotionProps }) => {
     </section>
   )
 }
-
-export default Promotion

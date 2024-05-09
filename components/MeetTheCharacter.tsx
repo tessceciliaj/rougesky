@@ -3,7 +3,7 @@ import { urlForImage } from '@/sanity/lib/image'
 import type { Character as CharacterProps } from '@/sanity/types/homepage'
 import { PortableText } from '@portabletext/react'
 
-const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
+export const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
   return (
     <section className='flex flex-col pb-6 max-w-6xl md:p-0 gap-6 md:flex-row items-center pt-12 px-6 md:px-24'>
       <Image
@@ -24,5 +24,3 @@ const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
     </section>
   )
 }
-
-export default MeetTheCharacter

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
 import { Footer as FooterProps } from '@/sanity/types/homepage'
 
-const Footer = ({ content }: { content: FooterProps }) => {
+export const Footer = ({ content }: { content: FooterProps }) => {
   return (
     <footer className='w-full text-lightColor flex flex-col gap-6 items-center pt-8 pb-6'>
       <Link href={content.link.link}>{content.link.text}</Link>
@@ -22,5 +22,3 @@ const Footer = ({ content }: { content: FooterProps }) => {
     </footer>
   )
 }
-
-export default Footer
