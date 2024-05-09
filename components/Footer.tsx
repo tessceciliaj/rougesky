@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { urlForImage } from '@/sanity/lib/image'
-import { Footer as FooterProps } from '@/sanity/types/homepage'
+import type { Footer as FooterProps } from '@/sanity/types/homepage'
 
 const Footer = ({ content }: { content: FooterProps }) => {
   return (

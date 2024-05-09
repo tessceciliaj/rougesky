@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { urlForImage } from '@/sanity/lib/image'
 import type { Hero as HeroProps } from '@/sanity/types/homepage'
 

@@ -5,8 +5,8 @@ import { description } from './sections/description'
 import { character } from './sections/character'
 import { newsletter } from './sections/newsletter'
 import { promotion } from './sections/promotion'
-import { button } from './components/button'
 import { footer } from './sections/footer'
+import { button } from './components/button'
 
 export const schema = [
   homepage,
@@ -16,6 +16,6 @@ export const schema = [
   character,
   newsletter,
   promotion,
-  button,
   footer,
+  button,
 ]
