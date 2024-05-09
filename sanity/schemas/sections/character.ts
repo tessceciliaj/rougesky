@@ -12,31 +12,24 @@ export const character = defineType({
       validation: rule => rule.required(),
     }),
     defineField({
-      name: 'characters',
-      title: 'Character cards',
+      name: 'text',
+      title: 'Text',
       type: 'array',
+      of: [{type: 'block'}],
       validation: rule => rule.required(),
-      of: [
-        defineArrayMember({
-          name: 'characters_card',
-          title: 'Card',
-          type: 'object',
-          fields: [
-            defineField({
-              name: 'name',
-              title: 'Name',
-              type: 'string',
-              validation: rule => rule.required(),
-            }),
-            defineField({
-              name: 'image',
-              title: 'Image',
-              type: 'image',
-              validation: rule => rule.required(),
-            }),
-          ],
+    }),
+    defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alternative text',
+          type: 'string',
         }),
       ],
+      validation: rule => rule.required(),
     }),
   ],
 })

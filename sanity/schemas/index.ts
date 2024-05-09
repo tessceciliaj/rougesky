@@ -6,6 +6,7 @@ import { character } from './sections/character'
 import { newsletter } from './sections/newsletter'
 import { promotion } from './sections/promotion'
 import { button } from './components/button'
+import { footer } from './sections/footer'
 
 export const schema = [
   homepage,
@@ -16,4 +17,5 @@ export const schema = [
   newsletter,
   promotion,
   button,
+  footer,
 ]

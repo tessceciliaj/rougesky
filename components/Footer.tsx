@@ -1,16 +1,17 @@
-import Logo from "./Logo"
+import Link from 'next/link'
+import Logo from './Logo'
+import { Footer as Props } from '@/sanity/types/homepage'
 
-const Footer: React.FC = () => {
+const Footer = ({ content }: { content: Props }) => {
   return (
-    <footer className='w-full text-lightColor flex flex-col items-center pt-6'>
+    <footer className='w-full text-lightColor flex flex-col gap-6 items-center pt-8 pb-6'>
+      <Link href={content.link.link}>{content.link.text}</Link>
       <Logo />
-      <hr className='my-4 md:my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
-        <p className='text-sm text-lightOpacity pb-4 px-4'>
-          © 2023{' '}
-          <a href='/' className='hover:underline'>
-            Megabit™
-          </a>
-        </p>
+      <Link
+        href={content.copyright.link}
+        className='text-sm text-lightOpacity pb-4 px-4 hover:underline'>
+        {content.copyright.text}
+      </Link>
     </footer>
   )
 }

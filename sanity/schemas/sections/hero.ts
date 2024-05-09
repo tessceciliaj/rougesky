@@ -28,12 +28,5 @@ export const hero = defineType({
         }),
       ],
     }),
-    defineField({
-      name: 'desc',
-      title: 'Description',
-      description: 'Short descriptive text about the game',
-      type: 'string',
-      validation: rule => rule.required(),
-    }),
   ],
 })

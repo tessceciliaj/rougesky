@@ -14,12 +14,16 @@ module.exports = {
         darkColor: '#0E0E0E',
         darkGrey: '#292929',
         lightGrey: '#B3D73B',
-        accentColor: '#E8084B',
+        accentColor: '#00D1FF',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        body: 'var(--font-IMB)',
+        title: 'var(--font-vt323)',
       },
     },
   },

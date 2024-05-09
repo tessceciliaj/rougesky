@@ -32,7 +32,7 @@ const Hero = ({
           />
           <div className='flex gap-2 justify-center'>
             {content.ctas.map((button, index) => {
-              const color = index % 2 === 0 ? 'bg-darkColor' : 'bg-accentColor'
+              const color = index % 2 === 0 ? 'bg-darkColor' : 'bg-[#00D870]'
 
               return (
                 <Link

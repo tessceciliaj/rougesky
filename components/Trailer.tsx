@@ -24,7 +24,7 @@ const Trailer = ({ content }: { content: TrailerProps }) => {
       videoId={videoId}
       opts={opts}
       onReady={onPlayerReady}
-      className='flex flex-col justify-center w-full aspect-video md:px-12 max-h-[calc(100vh-4rem)]'
+      className='flex flex-col justify-center w-full aspect-video md:px-12 max-h-[calc(100vh-4rem)] max-w-6xl'
     />
   )
 }

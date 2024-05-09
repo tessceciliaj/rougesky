@@ -18,5 +18,10 @@ export const newsletter = defineType({
       of: [{ type: 'block' }],
       validation: rule => rule.required(),
     }),
+    defineField({
+      name: 'button',
+      title: 'Button',
+      type: 'button',
+    }),
   ],
 })

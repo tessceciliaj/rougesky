@@ -1,35 +1,19 @@
 import { PortableText } from '@portabletext/react'
 import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
+import Link from 'next/link'
 
 const EmailInput = ({ content }: { content: NewsletterProps }) => {
   return (
-    <section className='w-full pb-24 pt-4 bg-accentColor'>
-      <h2 className='sectionTitle animate-bounce'>{content.title}</h2>
-      <div className='text-lightColor text-center pb-8'>
-        <PortableText value={content.desc} />
-      </div>
-      <form className='w-[80%] m-auto'>
-        <label
-          htmlFor='email'
-          className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'>
-          Email
-        </label>
-        <div className='relative'>
-          <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'></div>
-          <input
-            type='email'
-            id='email'
-            className='block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-accentColor focus:border-accentColor'
-            placeholder='Your Email'
-            required
-          />
-          <button
-            type='submit'
-            className='text-white absolute right-2.5 bottom-2 mainBtn bg-darkColor'>
-            Subscribe
-          </button>
+    <section className='w-full py-20 bg-[#00417D] mx-auto'>
+      <div className='max-w-6xl flex flex-col items-center gap-6'>
+        <h2 className='font-title text-white text-6xl'>{content.title}</h2>
+        <div className='text-lightColor text-center max-w-xl'>
+          <PortableText value={content.desc} />
         </div>
-      </form>
+        <Link href={content.button.link} className='mainBtn bg-darkColor'>
+          {content.button.text}
+        </Link>
+      </div>
     </section>
   )
 }

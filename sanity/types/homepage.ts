@@ -7,6 +7,7 @@ type Homepage = {
   character: Character | undefined
   newsletter: Newsletter | undefined
   promotion: Promotion | undefined
+  footer: Footer | undefined
 }
 
 type Cta = {
@@ -22,7 +23,6 @@ interface ImageWithAlt extends Image {
 type Hero = {
   logo: Image
   ctas: Cta[]
-  desc: string
 }
 
 type Trailer = {
@@ -31,22 +31,35 @@ type Trailer = {
 
 type Description = {
   title: string
-  descriptions: { text: PortableTextBlock; image: ImageWithAlt; _key: string }[]
+  subtitle: string
+  descriptions: {
+    text: PortableTextBlock
+    text_title: string
+    image: ImageWithAlt
+    _key: string
+  }[]
 }
 
 type Character = {
   title: string
-  characters: { name: string; image: Image; _key: string }[]
+  text: PortableTextBlock
+  image: ImageWithAlt
 }
 
 type Newsletter = {
   title: string
   desc: PortableTextBlock
+  button: Cta
 }
 
 type Promotion = {
   title: string
   button: Cta
+}
+
+type Footer = {
+  link: Cta
+  copyright: Cta
 }
 
 export type {
@@ -58,4 +71,5 @@ export type {
   Character,
   Newsletter,
   Promotion,
+  Footer,
 }

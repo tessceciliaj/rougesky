@@ -12,6 +12,14 @@ export const description = defineType({
       validation: rule => rule.required(),
     }),
     defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      description: 'Short descriptive text about the game',
+      type: 'string',
+      validation: rule => rule.required(),
+    }),
+    
+    defineField({
       name: 'descriptions',
       title: 'Desctiption cards',
       type: 'array',
@@ -33,6 +41,12 @@ export const description = defineType({
                   type: 'string',
                 }),
               ],
+              validation: rule => rule.required(),
+            }),
+            defineField({
+              name: 'text_title',
+              title: 'Text title',
+              type: 'string',
               validation: rule => rule.required(),
             }),
             defineField({

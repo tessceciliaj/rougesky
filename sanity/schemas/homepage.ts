@@ -35,5 +35,10 @@ export const homepage = defineType({
       title: 'Promotion section',
       type: 'promotion_section',
     }),
+    defineField({
+      name: 'footer_section',
+      title: 'Footer Section',
+      type: 'footer_section',
+    }),
   ],
 })
