@@ -1,7 +1,7 @@
-import React from 'react'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { urlForImage } from '@/sanity/lib/image'
+
 import type { Description as DescriptionProps } from '@/sanity/types/homepage'
 
 export const Description = ({ content }: { content: DescriptionProps }) => {

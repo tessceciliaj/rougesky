@@ -1,8 +1,9 @@
-import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
-import { apiVersion, dataset, projectId } from './sanity/env'
-import { schema } from './sanity/schemas'
+import { visionTool } from '@sanity/vision'
+
+import { apiVersion, dataset, projectId } from '@/sanity/env'
+import { schema } from '@/sanity/schemas'
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 const singletonTypes = new Set(['homepage'])

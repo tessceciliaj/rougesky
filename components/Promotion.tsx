@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowDown } from 'react-bootstrap-icons'
+
 import type { Promotion as PromotionProps } from '@/sanity/types/homepage'
 
 export const Promotion = ({ content }: { content: PromotionProps }) => {

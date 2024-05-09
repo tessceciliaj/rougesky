@@ -1,6 +1,7 @@
 'use client'
 
 import YouTube, { YouTubeProps } from 'react-youtube'
+
 import type { Trailer as TrailerProps } from '@/sanity/types/homepage'
 
 export const Trailer = ({ content }: { content: TrailerProps }) => {

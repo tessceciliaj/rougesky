@@ -1,6 +1,7 @@
-import { PortableText } from '@portabletext/react'
-import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 import Link from 'next/link'
+import { PortableText } from '@portabletext/react'
+
+import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 
 export const EmailInput = ({ content }: { content: NewsletterProps }) => {
   return (

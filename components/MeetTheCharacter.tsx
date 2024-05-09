@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import { PortableText } from '@portabletext/react'
+
 import { urlForImage } from '@/sanity/lib/image'
 import type { Character as CharacterProps } from '@/sanity/types/homepage'
-import { PortableText } from '@portabletext/react'
 
 export const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
   return (

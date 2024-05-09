@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import demoPicture from '@/public/picture.jpg'
 
 export const Banner = () => {
