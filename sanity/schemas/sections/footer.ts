@@ -13,6 +13,16 @@ export const footer = defineType({
       validation: rule => rule.required(),
     }),
     defineField({
+      name: 'logo',
+      title: 'Logo',
+      description: 'Upload the logo as an .svg file',
+      type: 'image',
+      options: {
+        accept: '.svg',
+      },
+      validation: rule => rule.required(),
+    }),
+    defineField({
       name: 'copyright',
       title: 'CopyRight',
       type: 'button',

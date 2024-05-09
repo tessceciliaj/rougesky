@@ -21,7 +21,7 @@ interface ImageWithAlt extends Image {
 }
 
 type Hero = {
-  logo: Image
+  background_image: Image
   ctas: Cta[]
 }
 
@@ -59,6 +59,7 @@ type Promotion = {
 
 type Footer = {
   link: Cta
+  logo: Image
   copyright: Cta
 }
 

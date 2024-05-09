@@ -7,13 +7,9 @@ export const hero = defineType({
   validation: rule => rule.required(),
   fields: [
     defineField({
-      name: 'logo',
-      title: 'Logo',
-      description: 'Upload the logo as an .svg file',
+      name: 'background_image',
+      title: 'Background Image',
       type: 'image',
-      options: {
-        accept: '.svg',
-      },
       validation: rule => rule.required(),
     }),
     defineField({
