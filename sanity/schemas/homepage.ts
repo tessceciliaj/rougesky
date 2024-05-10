@@ -31,11 +31,6 @@ export const homepage = defineType({
       type: 'newsletter_section',
     }),
     defineField({
-      name: 'promotion',
-      title: 'Promotion section',
-      type: 'promotion_section',
-    }),
-    defineField({
       name: 'footer',
       title: 'Footer Section',
       type: 'footer_section',

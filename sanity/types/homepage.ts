@@ -6,7 +6,6 @@ export type Homepage = {
   description: Description | undefined
   character: Character | undefined
   newsletter: Newsletter | undefined
-  promotion: Promotion | undefined
   footer: Footer | undefined
 }
 
@@ -49,11 +48,6 @@ export type Character = {
 export type Newsletter = {
   title: string
   desc: PortableTextBlock
-  button: Cta
-}
-
-export type Promotion = {
-  title: string
   button: Cta
 }
 
