@@ -17,7 +17,7 @@ export default async function Home() {
 
   return (
     <main className='flex min-h-screen flex-col items-center w-full bg-darkColor'>
-      <Header />
+      <Header content={content.header} />
       <Hero content={content.hero} />
       {content.trailer && <Trailer content={content.trailer} />}
       {content.description && <Description content={content.description} />}

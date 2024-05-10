@@ -6,10 +6,12 @@ import { character } from './sections/character'
 import { newsletter } from './sections/newsletter'
 import { footer } from './sections/footer'
 import { button } from './components/button'
+import { header } from './sections/header'
 
 export const schema = [
   homepage,
   hero,
+  header,
   trailer,
   description,
   character,
