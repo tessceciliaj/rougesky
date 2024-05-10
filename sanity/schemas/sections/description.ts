@@ -18,7 +18,7 @@ export const description = defineType({
       type: 'string',
       validation: rule => rule.required(),
     }),
-    
+
     defineField({
       name: 'descriptions',
       title: 'Desctiption cards',

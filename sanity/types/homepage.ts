@@ -2,6 +2,7 @@ import type { Image, PortableTextBlock } from 'sanity'
 
 export type Homepage = {
   hero: Hero
+  header: Header
   trailer: Trailer | undefined
   description: Description | undefined
   character: Character | undefined
@@ -17,6 +18,13 @@ export type Cta = {
 
 interface ImageWithAlt extends Image {
   alt: string
+}
+
+export type Header = {
+  iconButtons: {
+    icon: ImageWithAlt
+    link: string
+  }[]
 }
 
 export type Hero = {
