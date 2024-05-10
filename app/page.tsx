@@ -4,7 +4,7 @@ import { Hero } from '@/components/Hero'
 import { Trailer } from '@/components/Trailer'
 import { Description } from '@/components/Description'
 import { MeetTheCharacter } from '@/components/MeetTheCharacter'
-import { EmailInput } from '@/components/EmailInput'
+import { JoinNow } from '@/components/JoinNow'
 import { Footer } from '@/components/Footer'
 import type { Homepage } from '@/sanity/types/homepage'
 
@@ -22,7 +22,7 @@ export default async function Home() {
       {content.trailer && <Trailer content={content.trailer} />}
       {content.description && <Description content={content.description} />}
       {content.character && <MeetTheCharacter content={content.character} />}
-      {content.newsletter && <EmailInput content={content.newsletter} />}
+      {content.newsletter && <JoinNow content={content.newsletter} />}
       {content.footer && <Footer content={content.footer} />}
     </main>
   )
