@@ -9,13 +9,13 @@ export const header = defineType({
       name: 'iconButtons',
       title: 'Icon Buttons',
       type: 'array',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
       of: [
         defineArrayMember({
           name: 'button',
           title: 'Button',
           type: 'object',
-          validation: rule => rule.required(),
+          validation: (rule) => rule.required(),
           fields: [
             defineField({
               name: 'icon',
@@ -31,13 +31,14 @@ export const header = defineType({
                   type: 'string',
                 }),
               ],
-              validation: rule => rule.required(),
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: 'link',
               title: 'Link',
               type: 'url',
-              validation: rule => rule.required().uri({ allowRelative: true }),
+              validation: (rule) =>
+                rule.required().uri({ allowRelative: true }),
             }),
           ],
         }),

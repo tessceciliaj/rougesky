@@ -9,14 +9,14 @@ export const newsletter = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'desc',
       title: 'Description',
       type: 'array',
       of: [{ type: 'block' }],
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'button',

@@ -8,7 +8,7 @@ import type { Header as HeaderProps } from '@/sanity/types/homepage'
 
 export const Header = ({ content }: { content: HeaderProps }) => {
   return (
-    <nav className='flex absolute justify-between items-center w-full p-4 gap-6 bg-darkOpacity'>
+    <nav className='absolute flex w-full items-center justify-between gap-6 bg-darkOpacity p-4'>
       <div className='flex justify-center gap-2'>
         <Button color='pink'>Watch Trailer</Button>
         <Button variant='tertiary'>
