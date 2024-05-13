@@ -7,7 +7,9 @@ import type { Description as DescriptionProps } from '@/sanity/types/homepage'
 export const Description = ({ content }: { content: DescriptionProps }) => {
   return (
     <div className='flex max-w-6xl flex-col px-8 text-center'>
-      <h2 className='sectionTitle'>{content.title}</h2>
+      <h2 className='text-blue px-6 pb-6 pt-12 text-center font-title text-2xl font-bold md:px-24 md:pb-12 md:text-4xl'>
+        {content.title}
+      </h2>
       <h3 className='text-light pb-16 md:text-lg'>{content.subtitle}</h3>
       <div className='text-light flex w-full flex-wrap justify-center gap-4'>
         {content.descriptions.map((card) => (
