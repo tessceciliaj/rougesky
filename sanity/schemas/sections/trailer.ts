@@ -9,7 +9,7 @@ export const trailer = defineType({
       name: 'url',
       title: 'Url',
       type: 'url',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
   ],
 })

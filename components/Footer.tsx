@@ -6,7 +6,7 @@ import type { Footer as FooterProps } from '@/sanity/types/homepage'
 
 export const Footer = ({ content }: { content: FooterProps }) => {
   return (
-    <footer className='w-full text-lightColor flex flex-col gap-6 items-center pt-8 pb-6'>
+    <footer className='flex w-full flex-col items-center gap-6 pb-6 pt-8 text-lightColor'>
       <Link href={content.link.link}>{content.link.text}</Link>
       <Image
         src={urlForImage(content.logo).url()}
@@ -17,7 +17,8 @@ export const Footer = ({ content }: { content: FooterProps }) => {
       />
       <Link
         href={content.copyright.link}
-        className='text-sm text-lightOpacity pb-4 px-4 hover:underline'>
+        className='px-4 pb-4 text-sm text-lightOpacity hover:underline'
+      >
         {content.copyright.text}
       </Link>
     </footer>

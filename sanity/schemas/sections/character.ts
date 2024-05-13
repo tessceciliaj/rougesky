@@ -9,14 +9,14 @@ export const character = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'text',
       title: 'Text',
       type: 'array',
-      of: [{type: 'block'}],
-      validation: rule => rule.required(),
+      of: [{ type: 'block' }],
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'image',
@@ -29,7 +29,7 @@ export const character = defineType({
           type: 'string',
         }),
       ],
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
   ],
 })

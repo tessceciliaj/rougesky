@@ -4,13 +4,13 @@ export const footer = defineType({
   name: 'footer_section',
   title: 'Footer Section',
   type: 'object',
-  validation: rule => rule.required(),
+  validation: (rule) => rule.required(),
   fields: [
     defineField({
       name: 'link',
       title: 'Link',
       type: 'button',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'logo',
@@ -20,13 +20,13 @@ export const footer = defineType({
       options: {
         accept: '.svg',
       },
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'copyright',
       title: 'CopyRight',
       type: 'button',
-      validation: rule => rule.required(),
+      validation: (rule) => rule.required(),
     }),
   ],
 })

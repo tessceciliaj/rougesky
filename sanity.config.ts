@@ -15,7 +15,7 @@ export default defineConfig({
   dataset,
   plugins: [
     deskTool({
-      structure: S =>
+      structure: (S) =>
         S.list()
           .title('Content')
           .items([
@@ -34,7 +34,7 @@ export default defineConfig({
   ],
   schema: {
     types: schema,
-    templates: templates =>
+    templates: (templates) =>
       templates.filter(({ schemaType }) => !singletonTypes.has(schemaType)),
   },
   document: {

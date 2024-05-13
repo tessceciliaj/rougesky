@@ -6,19 +6,19 @@ import type { Character as CharacterProps } from '@/sanity/types/homepage'
 
 export const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
   return (
-    <section className='flex flex-col pb-6 max-w-6xl md:p-0 gap-6 md:flex-row items-center pt-12 px-6 md:px-24'>
+    <section className='flex max-w-6xl flex-col items-center gap-6 px-6 pb-6 pt-12 md:flex-row md:p-0 md:px-24'>
       <Image
         src={urlForImage(content.image).url()}
         alt={content.image.alt}
         width={800}
         height={1600}
-        className='rounded object-cover max-w-[50%] flex-1'
+        className='max-w-[50%] flex-1 rounded object-cover'
       />
-      <div className='flex flex-col gap-6 flex-1'>
-        <h2 className='text-5xl font-title md:text-4xl text-accentColor'>
+      <div className='flex flex-1 flex-col gap-6'>
+        <h2 className='font-title text-5xl text-accentColor md:text-4xl'>
           {content.title}
         </h2>
-        <div className='text-white text-xl'>
+        <div className='text-xl text-white'>
           <PortableText value={content.text} />
         </div>
       </div>
