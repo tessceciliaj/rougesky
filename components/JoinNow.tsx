@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 
+import { Button } from './ui/Button'
 import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
 
 export const JoinNow = ({ content }: { content: NewsletterProps }) => {
@@ -13,9 +14,9 @@ export const JoinNow = ({ content }: { content: NewsletterProps }) => {
         <div className='text-lightColor text-center max-w-xl'>
           <PortableText value={content.desc} />
         </div>
-        <Link href={content.button.link} className='mainBtn bg-darkColor'>
+        <Button as={Link} href={content.button.link} color='black'>
           {content.button.text}
-        </Link>
+        </Button>
       </div>
     </section>
   )
