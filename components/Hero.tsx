@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { Button } from './ui/Button'
 import { urlForImage } from '@/sanity/lib/image'
 import type { Hero as HeroProps } from '@/sanity/types/homepage'
 
@@ -10,18 +11,12 @@ export const Hero = ({ content }: { content: HeroProps }) => {
       style={{
         backgroundImage: `url(${urlForImage(content.background_image).url()})`,
       }}>
-      {content.ctas.map((button, index) => {
-        const color = index % 2 === 0 ? 'bg-darkColor' : 'bg-[#00D870]'
-
-        return (
-          <Link
-            href={button.link}
-            key={button._key}
-            className={'mainBtn ' + color}>
-            {button.text}
-          </Link>
-        )
-      })}
+      {/* TODO: add ability to pick color and add icon in sanity */}
+      {content.ctas.map(({ _key, link, text }) => (
+        <Button key={_key} as={Link} href={link}>
+          {text}
+        </Button>
+      ))}
     </div>
   )
 }

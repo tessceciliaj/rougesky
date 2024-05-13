@@ -1,35 +1,31 @@
-import { Twitter, Tiktok, Youtube, Discord, Steam } from 'react-bootstrap-icons'
-
-import type { Header as HeaderProps } from '@/sanity/types/homepage'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Steam } from 'react-bootstrap-icons'
+
+import { Button } from './ui/Button'
 import { urlForImage } from '@/sanity/lib/image'
+import type { Header as HeaderProps } from '@/sanity/types/homepage'
 
 export const Header = ({ content }: { content: HeaderProps }) => {
   return (
     <nav className='flex absolute justify-between items-center w-full p-4 gap-6 bg-darkOpacity'>
-      <div className='flex justify-center gap-6'>
-        <button className='mainBtn bg-[#EB0256]'>Watch Trailer</button>
-        <button className='rotateBtn'>
-          <Steam />
-        </button>
+      <div className='flex justify-center gap-2'>
+        <Button color='pink'>Watch Trailer</Button>
+        <Button variant='tertiary'>
+          <Steam size={24} />
+        </Button>
       </div>
-      <div className='flex justify-end gap-6 text-xl'>
-        {content.iconButtons.map((button, index) => (
-          <Link
-            key={index}
-            href={button.link}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='rotateBtn'>
+      <div className='flex gap-2'>
+        {content.iconButtons.map(({ link, icon }) => (
+          <Button key={link} as={Link} href={link} variant='tertiary'>
             <Image
-              src={urlForImage(button.icon).url()}
-              width={350}
-              height={200}
-              alt={button.icon.alt}
-              className='rounded max-h-8 w-8 object-cover'
+              src={urlForImage(icon).url()}
+              width={24}
+              height={24}
+              alt={icon.alt}
+              className='size-6 object-contain'
             />
-          </Link>
+          </Button>
         ))}
       </div>
     </nav>
