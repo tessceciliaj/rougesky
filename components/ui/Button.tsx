@@ -9,14 +9,14 @@ const variants = cva(
   {
     variants: {
       variant: {
-        primary: 'border border-white px-6 hover:scale-105',
+        primary: 'border border-light px-6 hover:scale-105',
         tertiary: 'p-2 min-w-12 hover:scale-110',
       },
       color: {
-        green: 'bg-green text-darkColor',
-        pink: 'bg-pink text-white',
-        black: 'bg-darkColor text-white border-darkColor',
-        transparent: 'bg-transparent text-white',
+        green: 'bg-green text-dark',
+        pink: 'bg-pink text-light',
+        black: 'bg-dark text-light border-dark',
+        transparent: 'bg-transparent text-light',
       },
     },
     defaultVariants: {

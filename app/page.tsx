@@ -16,7 +16,7 @@ export default async function Home() {
   const content: Homepage = await getHomepage()
 
   return (
-    <main className='flex min-h-screen w-full flex-col items-center bg-darkColor'>
+    <main className='flex min-h-screen w-full flex-col items-center'>
       <Header content={content.header} />
       <Hero content={content.hero} />
       {content.trailer && <Trailer content={content.trailer} />}

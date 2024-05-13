@@ -8,8 +8,8 @@ export const Description = ({ content }: { content: DescriptionProps }) => {
   return (
     <div className='flex max-w-6xl flex-col px-8 text-center'>
       <h2 className='sectionTitle'>{content.title}</h2>
-      <h3 className='pb-16 text-lightColor md:text-lg'>{content.subtitle}</h3>
-      <div className='flex w-full flex-wrap justify-center gap-4 text-lightColor'>
+      <h3 className='text-light pb-16 md:text-lg'>{content.subtitle}</h3>
+      <div className='text-light flex w-full flex-wrap justify-center gap-4'>
         {content.descriptions.map((card) => (
           <div key={card._key} className='min-w-[12rem] max-w-xs flex-1'>
             <Image
@@ -19,7 +19,7 @@ export const Description = ({ content }: { content: DescriptionProps }) => {
               alt={card.image.alt}
               className='h-[300px] rounded object-cover'
             />
-            <h4 className='pt-8 font-title text-4xl text-accentColor'>
+            <h4 className='text-blue pt-8 font-title text-4xl'>
               {card.text_title}
             </h4>
             <div className='pt-4'>

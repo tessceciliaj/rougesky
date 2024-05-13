@@ -2,6 +2,7 @@ import { VT323, IBM_Plex_Mono } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import './globals.css'
+import { cn } from '@/utils/classnames'
 
 const vt323 = VT323({
   subsets: ['latin'],
@@ -26,7 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${vt323.variable} ${imb_plex_mono.variable} font-body`}>
+      <body
+        className={cn(
+          vt323.variable,
+          imb_plex_mono.variable,
+          'bg-dark text-light font-body',
+        )}
+      >
         {children}
       </body>
     </html>

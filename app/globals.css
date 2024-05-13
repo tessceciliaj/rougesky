@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .sectionTitle {
-  @apply px-6 pb-6 pt-12 text-center font-title text-2xl font-bold text-accentColor md:px-24 md:pb-12 md:text-4xl;
+  @apply text-blue px-6 pb-6 pt-12 text-center font-title text-2xl font-bold md:px-24 md:pb-12 md:text-4xl;
 }
