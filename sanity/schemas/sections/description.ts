@@ -40,8 +40,8 @@ export const description = defineType({
               validation: (rule) => rule.required(),
             }),
             defineField({
-              name: 'text_title',
-              title: 'Text title',
+              name: 'title',
+              title: 'Title',
               type: 'string',
               validation: (rule) => rule.required(),
             }),
@@ -63,9 +63,9 @@ export type Description = {
   title: string
   subtitle: string
   descriptions: {
-    text: PortableTextBlock
-    text_title: string
     image: ImageWithAlt
+    title: string
+    text: PortableTextBlock
     _key: string
   }[]
 }

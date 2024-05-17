@@ -49,16 +49,17 @@ export const homepage = defineType({
       name: 'footer',
       title: 'Footer Section',
       type: 'footer_section',
+      validation: (rule) => rule.required(),
     }),
   ],
 })
 
 export type Homepage = {
-  hero: Hero
   header: Header
+  hero: Hero
   trailer: Trailer | undefined
   description: Description | undefined
   character: Character | undefined
   newsletter: Newsletter | undefined
-  footer: Footer | undefined
+  footer: Footer
 }

@@ -6,10 +6,11 @@ export const header = defineType({
   name: 'header_section',
   title: 'Header section',
   type: 'object',
+  validation: (rule) => rule.required(),
   fields: [
     defineField({
-      name: 'iconButtons',
-      title: 'Icon Buttons',
+      name: 'socials_buttons',
+      title: 'Socials buttons',
       type: 'array',
       validation: (rule) => rule.required(),
       of: [
@@ -24,5 +25,5 @@ export const header = defineType({
 })
 
 export type Header = {
-  iconButtons: (Button & { _key: string })[]
+  socials_buttons: (Button & { _key: string })[]
 }
