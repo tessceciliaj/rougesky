@@ -1,15 +1,55 @@
 import { defineField, defineType } from 'sanity'
 
+import { assert } from '@/utils/assert'
+import { eitherOr } from '@/sanity/schemas/utils'
+
 export const button = defineType({
   name: 'button',
-  title: 'Call to action',
+  title: 'Button',
   type: 'object',
   fields: [
     defineField({
-      name: 'text',
-      title: 'Text',
+      name: 'label',
+      title: 'Label',
       type: 'string',
-      validation: (rule) => rule.required(),
+      validation: (rule) =>
+        rule.custom((field, context) =>
+          eitherOr(
+            () => {
+              assert(field)
+            },
+            () => {
+              assert(context.parent)
+              assert(typeof context.parent === 'object')
+              assert('icon' in context.parent)
+              assert(context.parent.icon)
+              assert(typeof context.parent.icon === 'object')
+              assert('asset' in context.parent.icon)
+            },
+            'Either label or icon needs to be defined',
+          ),
+        ),
+    }),
+    defineField({
+      name: 'icon',
+      title: 'Icon',
+      type: 'svg_with_alt',
+      validation: (rule) =>
+        rule.custom((field, context) =>
+          eitherOr(
+            () => {
+              assert(field)
+              assert(typeof field === 'object')
+              assert('asset' in field)
+            },
+            () => {
+              assert(context.parent)
+              assert(typeof context.parent === 'object')
+              assert('label' in context.parent)
+            },
+            'Either label or icon needs to be defined',
+          ),
+        ),
     }),
     defineField({
       name: 'link',

@@ -16,10 +16,7 @@ export const footer = defineType({
       name: 'logo',
       title: 'Logo',
       description: 'Upload the logo as an .svg file',
-      type: 'image',
-      options: {
-        accept: '.svg',
-      },
+      type: 'svg_with_alt',
       validation: (rule) => rule.required(),
     }),
     defineField({

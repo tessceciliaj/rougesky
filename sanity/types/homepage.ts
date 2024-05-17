@@ -10,8 +10,9 @@ export type Homepage = {
   footer: Footer | undefined
 }
 
-export type Cta = {
-  text: string
+export type Button = {
+  text?: string
+  icon?: ImageWithAlt
   link: string
   _key: string
 }
@@ -21,15 +22,12 @@ interface ImageWithAlt extends Image {
 }
 
 export type Header = {
-  iconButtons: {
-    icon: ImageWithAlt
-    link: string
-  }[]
+  iconButtons: Button[]
 }
 
 export type Hero = {
   background_image: Image
-  ctas: Cta[]
+  ctas: Button[]
 }
 
 export type Trailer = {
@@ -56,11 +54,11 @@ export type Character = {
 export type Newsletter = {
   title: string
   desc: PortableTextBlock
-  button: Cta
+  button: Button
 }
 
 export type Footer = {
-  link: Cta
+  link: Button
   logo: Image
-  copyright: Cta
+  copyright: Button
 }
