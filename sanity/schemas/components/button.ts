@@ -62,7 +62,7 @@ export const button = defineType({
 })
 
 export type Button = {
-  text?: string
+  label?: string
   icon?: ImageWithAlt
   link: string
 }
