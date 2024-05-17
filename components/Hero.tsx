@@ -12,7 +12,7 @@ export const Hero = ({ content }: { content: HeroProps }) => {
         backgroundImage: `url(${urlForImage(content.background_image).url()})`,
       }}
     >
-      {/* TODO: add ability to pick color and add icon in sanity */}
+      {/* TODO: fix this to alternate between regular button and icon button */}
       {content.ctas.map(({ _key, link, text }) => (
         <Button key={_key} as={Link} href={link}>
           {text}

@@ -6,15 +6,15 @@ export const homepage = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'hero',
-      title: 'Hero section',
-      type: 'hero_section',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'header',
       title: 'Header Section',
       type: 'header_section',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'hero',
+      title: 'Hero section',
+      type: 'hero_section',
       validation: (rule) => rule.required(),
     }),
     defineField({

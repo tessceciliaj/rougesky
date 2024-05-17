@@ -16,17 +16,21 @@ export const Header = ({ content }: { content: HeaderProps }) => {
         </Button>
       </div>
       <div className='flex gap-2'>
-        {content.iconButtons.map(({ link, icon }) => (
-          <Button key={link} as={Link} href={link} variant='tertiary'>
-            <Image
-              src={urlForImage(icon).url()}
-              width={24}
-              height={24}
-              alt={icon.alt}
-              className='size-6 object-contain'
-            />
-          </Button>
-        ))}
+        {content.iconButtons.map(({ link, icon }) => {
+          // TODO: fix this to alternate between regular button and icon button
+          if (!icon) return null
+          return (
+            <Button key={link} as={Link} href={link} variant='tertiary'>
+              <Image
+                src={urlForImage(icon).url()}
+                width={24}
+                height={24}
+                alt={icon.alt}
+                className='size-6 object-contain'
+              />
+            </Button>
+          )
+        })}
       </div>
     </nav>
   )

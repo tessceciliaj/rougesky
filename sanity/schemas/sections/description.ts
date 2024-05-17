@@ -33,14 +33,7 @@ export const description = defineType({
             defineField({
               name: 'image',
               title: 'Image',
-              type: 'image',
-              fields: [
-                defineField({
-                  name: 'alt',
-                  title: 'Alternative text',
-                  type: 'string',
-                }),
-              ],
+              type: 'image_with_alt',
               validation: (rule) => rule.required(),
             }),
             defineField({

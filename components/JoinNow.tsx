@@ -14,6 +14,7 @@ export const JoinNow = ({ content }: { content: NewsletterProps }) => {
         <div className='text-light max-w-xl text-center'>
           <PortableText value={content.desc} />
         </div>
+        {/* TODO: fix this to alternate between regular button and icon button */}
         <Button as={Link} href={content.button.link}>
           {content.button.text}
         </Button>
