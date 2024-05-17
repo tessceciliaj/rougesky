@@ -14,7 +14,7 @@ export const JoinNow = ({ content }: { content: NewsletterProps }) => {
         <div className='text-light max-w-xl text-center'>
           <PortableText value={content.desc} />
         </div>
-        <Button as={Link} href={content.button.link} color='black'>
+        <Button as={Link} href={content.button.link}>
           {content.button.text}
         </Button>
       </div>

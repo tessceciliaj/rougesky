@@ -15,7 +15,7 @@ export const MeetTheCharacter = ({ content }: { content: CharacterProps }) => {
         className='max-w-[50%] flex-1 rounded object-cover'
       />
       <div className='flex flex-1 flex-col gap-6'>
-        <h2 className='text-blue font-title text-5xl md:text-4xl'>
+        <h2 className='text-primary font-title text-5xl md:text-4xl'>
           {content.title}
         </h2>
         <div className='text-light text-xl'>
