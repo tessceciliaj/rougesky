@@ -2,7 +2,7 @@
 
 import YouTube, { YouTubeProps } from 'react-youtube'
 
-import type { Trailer as TrailerProps } from '@/sanity/types/homepage'
+import type { Trailer as TrailerProps } from '@/sanity/schemas/sections/trailer'
 
 export const Trailer = ({ content }: { content: TrailerProps }) => {
   const videoId = new URL(content.url).searchParams.get('v') || undefined

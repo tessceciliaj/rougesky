@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Button } from './ui/Button'
 import { urlForImage } from '@/sanity/lib/image'
-import type { Hero as HeroProps } from '@/sanity/types/homepage'
+import type { Hero as HeroProps } from '@/sanity/schemas/sections/hero'
 
 export const Hero = ({ content }: { content: HeroProps }) => {
   return (

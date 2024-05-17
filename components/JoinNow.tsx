@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 
 import { Button } from './ui/Button'
-import type { Newsletter as NewsletterProps } from '@/sanity/types/homepage'
+import type { Newsletter as NewsletterProps } from '@/sanity/schemas/sections/newsletter'
 
 export const JoinNow = ({ content }: { content: NewsletterProps }) => {
   return (

@@ -1,7 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 import { assert } from '@/utils/assert'
-import { eitherOr } from '@/sanity/schemas/utils'
+import { eitherOr } from '../utils'
+import type { ImageWithAlt } from './image'
 
 export const button = defineType({
   name: 'button',
@@ -59,3 +60,9 @@ export const button = defineType({
     }),
   ],
 })
+
+export type Button = {
+  text?: string
+  icon?: ImageWithAlt
+  link: string
+}

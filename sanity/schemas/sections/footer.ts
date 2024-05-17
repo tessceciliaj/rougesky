@@ -1,5 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
+import type { Button } from '../components/button'
+import type { ImageWithAlt } from '../components/image'
+
 export const footer = defineType({
   name: 'footer_section',
   title: 'Footer Section',
@@ -27,3 +30,9 @@ export const footer = defineType({
     }),
   ],
 })
+
+export type Footer = {
+  link: Button
+  logo: ImageWithAlt
+  copyright: Button
+}

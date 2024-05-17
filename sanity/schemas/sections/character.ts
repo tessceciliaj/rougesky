@@ -1,4 +1,7 @@
 import { defineField, defineType } from 'sanity'
+import type { PortableTextBlock } from 'next-sanity'
+
+import type { ImageWithAlt } from '../components/image'
 
 export const character = defineType({
   name: 'character_section',
@@ -33,3 +36,9 @@ export const character = defineType({
     }),
   ],
 })
+
+export type Character = {
+  title: string
+  text: PortableTextBlock
+  image: ImageWithAlt
+}

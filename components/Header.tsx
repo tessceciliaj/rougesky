@@ -4,7 +4,7 @@ import { Steam } from 'react-bootstrap-icons'
 
 import { Button } from './ui/Button'
 import { urlForImage } from '@/sanity/lib/image'
-import type { Header as HeaderProps } from '@/sanity/types/homepage'
+import type { Header as HeaderProps } from '@/sanity/schemas/sections/header'
 
 export const Header = ({ content }: { content: HeaderProps }) => {
   return (
