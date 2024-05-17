@@ -13,9 +13,9 @@ export const Hero = ({ content }: { content: HeroProps }) => {
       }}
     >
       {/* TODO: fix this to alternate between regular button and icon button */}
-      {content.ctas.map(({ _key, link, text }) => (
+      {content.ctas.map(({ _key, link, label }) => (
         <Button key={_key} as={Link} href={link}>
-          {text}
+          {label}
         </Button>
       ))}
     </div>

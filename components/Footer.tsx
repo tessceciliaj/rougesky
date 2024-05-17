@@ -8,7 +8,7 @@ export const Footer = ({ content }: { content: FooterProps }) => {
   return (
     <footer className='text-light flex w-full flex-col items-center gap-6 pb-6 pt-8'>
       {/* TODO: fix this to alternate between regular button and icon button */}
-      <Link href={content.link.link}>{content.link.text}</Link>
+      <Link href={content.link.link}>{content.link.label}</Link>
       <Image
         src={urlForImage(content.logo).url()}
         alt='company logo'
@@ -21,7 +21,7 @@ export const Footer = ({ content }: { content: FooterProps }) => {
         href={content.copyright.link}
         className='px-4 pb-4 text-sm hover:underline'
       >
-        {content.copyright.text}
+        {content.copyright.label}
       </Link>
     </footer>
   )
