@@ -9,19 +9,12 @@ const variants = cva(
   {
     variants: {
       variant: {
-        primary: 'border border-light px-6 hover:scale-105',
-        tertiary: 'p-2 min-w-12 hover:scale-110',
-      },
-      color: {
-        green: 'bg-green text-dark',
-        pink: 'bg-pink text-light',
-        black: 'bg-dark text-light border-dark',
-        transparent: 'bg-transparent text-light',
+        primary: 'px-6 hover:scale-105 bg-primary text-dark',
+        tertiary: 'p-2 min-w-12 hover:scale-110 bg-none text-light',
       },
     },
     defaultVariants: {
       variant: 'primary',
-      color: 'green',
     },
   },
 )
@@ -30,16 +23,13 @@ export const Button = <T extends ElementType = 'button'>({
   as,
   children,
   variant,
-  color,
   className,
   ...rest
 }: PolymorphicPropsWithoutRef<VariantProps<typeof variants>, T>) => {
   const Element: ElementType = as || 'button'
 
-  color = variant === 'tertiary' ? 'transparent' : color
-
   return (
-    <Element className={cn(variants({ variant, color, className }))} {...rest}>
+    <Element className={cn(variants({ variant, className }))} {...rest}>
       {children}
     </Element>
   )
