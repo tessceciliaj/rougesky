@@ -30,5 +30,5 @@ export const svgWithAlt = defineType({
 })
 
 export type ImageWithAlt = Image & {
-  alt: string
+  alt?: string
 }

@@ -18,11 +18,11 @@ export const Description = ({ content }: { content: DescriptionProps }) => {
               src={urlForImage(card.image).url()}
               width={350}
               height={200}
-              alt={card.image.alt}
+              alt={card.image.alt || ''}
               className='h-[300px] rounded object-cover'
             />
             <h4 className='text-primary pt-8 font-title text-4xl'>
-              {card.text_title}
+              {card.title}
             </h4>
             <div className='pt-4'>
               <PortableText value={card.text} />

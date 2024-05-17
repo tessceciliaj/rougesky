@@ -25,6 +25,7 @@ export const newsletter = defineType({
       name: 'button',
       title: 'Button',
       type: 'button',
+      validation: (rule) => rule.required(),
     }),
   ],
 })
