@@ -1,4 +1,7 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
+import type { PortableTextBlock } from 'next-sanity'
+
+import type { ImageWithAlt } from '../components/image'
 
 export const description = defineType({
   name: 'description_section',
@@ -55,3 +58,14 @@ export const description = defineType({
     }),
   ],
 })
+
+export type Description = {
+  title: string
+  subtitle: string
+  descriptions: {
+    text: PortableTextBlock
+    text_title: string
+    image: ImageWithAlt
+    _key: string
+  }[]
+}

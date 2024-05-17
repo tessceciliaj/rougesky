@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { type Image, defineField, defineType } from 'sanity'
 
 export const imageWithAlt = defineType({
   name: 'image_with_alt',
@@ -28,3 +28,7 @@ export const svgWithAlt = defineType({
     }),
   ],
 })
+
+export type ImageWithAlt = Image & {
+  alt: string
+}

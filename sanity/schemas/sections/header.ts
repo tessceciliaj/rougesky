@@ -1,5 +1,7 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
+import type { Button } from '../components/button'
+
 export const header = defineType({
   name: 'header_section',
   title: 'Header section',
@@ -20,3 +22,7 @@ export const header = defineType({
     }),
   ],
 })
+
+export type Header = {
+  iconButtons: (Button & { _key: string })[]
+}

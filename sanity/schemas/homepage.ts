@@ -1,5 +1,13 @@
 import { defineField, defineType } from 'sanity'
 
+import type { Hero } from './sections/hero'
+import type { Header } from './sections/header'
+import type { Trailer } from './sections/trailer'
+import type { Description } from './sections/description'
+import type { Character } from './sections/character'
+import type { Newsletter } from './sections/newsletter'
+import type { Footer } from './sections/footer'
+
 export const homepage = defineType({
   name: 'homepage',
   title: 'Homepage',
@@ -44,3 +52,13 @@ export const homepage = defineType({
     }),
   ],
 })
+
+export type Homepage = {
+  hero: Hero
+  header: Header
+  trailer: Trailer | undefined
+  description: Description | undefined
+  character: Character | undefined
+  newsletter: Newsletter | undefined
+  footer: Footer | undefined
+}

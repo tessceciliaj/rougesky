@@ -1,4 +1,6 @@
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { type Image, defineArrayMember, defineField, defineType } from 'sanity'
+
+import type { Button } from '../components/button'
 
 export const hero = defineType({
   name: 'hero_section',
@@ -26,3 +28,8 @@ export const hero = defineType({
     }),
   ],
 })
+
+export type Hero = {
+  background_image: Image
+  ctas: (Button & { _key: string })[]
+}

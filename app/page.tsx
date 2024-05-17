@@ -6,7 +6,7 @@ import { Description } from '@/components/Description'
 import { MeetTheCharacter } from '@/components/MeetTheCharacter'
 import { JoinNow } from '@/components/JoinNow'
 import { Footer } from '@/components/Footer'
-import type { Homepage } from '@/sanity/types/homepage'
+import type { Homepage } from '@/sanity/schemas/homepage'
 
 const getHomepage = async () => {
   return await client.fetch(`*[_type == "homepage"][0]`)

@@ -1,4 +1,7 @@
 import { defineField, defineType } from 'sanity'
+import type { PortableTextBlock } from 'next-sanity'
+
+import type { Button } from '../components/button'
 
 export const newsletter = defineType({
   name: 'newsletter_section',
@@ -25,3 +28,9 @@ export const newsletter = defineType({
     }),
   ],
 })
+
+export type Newsletter = {
+  title: string
+  desc: PortableTextBlock
+  button: Button
+}
