@@ -4,6 +4,7 @@ import { Button } from './ui/Button'
 import { getImageDimensions, urlForImage } from '@/sanity/lib/image'
 import type { Hero as HeroProps } from '@/sanity/schemas/sections/hero'
 import Image from 'next/image'
+import { cn } from '@/utils/classnames'
 
 export const Hero = ({ content }: { content: HeroProps }) => {
   const dimensions = getImageDimensions(content.background_image)
@@ -18,20 +19,21 @@ export const Hero = ({ content }: { content: HeroProps }) => {
         className='w-full'
       />
       <div className='absolute -bottom-6 flex w-full justify-center gap-2 px-4 md:bottom-8'>
-        {content.ctas.map(({ _key, link, label, icon }) => (
+        {content.ctas.map(({ _key, button, primary }) => (
           <Button
             key={_key}
             as={Link}
-            href={link}
-            variant={icon && !label ? 'tertiary' : 'primary'}
+            href={button.link}
+            variant={button.icon && !button.label ? 'tertiary' : 'primary'}
+            className={cn(!primary && 'hidden md:inline-flex')}
           >
-            {label}
-            {icon && (
+            {button.label}
+            {button.icon && (
               <Image
-                src={urlForImage(icon).url()}
+                src={urlForImage(button.icon).url()}
                 width={24}
                 height={24}
-                alt={icon.alt || ''}
+                alt={button.icon.alt || ''}
                 className='size-6 object-contain'
               />
             )}
