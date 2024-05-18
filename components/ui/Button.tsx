@@ -5,7 +5,7 @@ import { cn } from '@/utils/classnames'
 import type { PolymorphicPropsWithoutRef } from '@/types/polymorphic'
 
 const variants = cva(
-  'inline-flex whitespace-nowrap items-center h-12 gap-2 justify-center outline-none font-title text-lg transition',
+  'inline-flex whitespace-nowrap items-center h-12 gap-4 justify-center outline-none font-title text-lg transition',
   {
     variants: {
       variant: {
