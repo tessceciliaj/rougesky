@@ -8,7 +8,7 @@ import type { Header as HeaderProps } from '@/sanity/schemas/sections/header'
 
 export const Header = ({ content }: { content: HeaderProps }) => {
   return (
-    <nav className='bg-dark/50 absolute flex w-full items-center justify-between gap-6 p-4'>
+    <header className='bg-dark/50 absolute z-50 flex h-20 w-full items-center justify-between gap-6 px-4'>
       <div className='flex justify-center gap-2'>
         <Button>Watch Trailer</Button>
         <Button variant='tertiary'>
@@ -32,6 +32,6 @@ export const Header = ({ content }: { content: HeaderProps }) => {
           )
         })}
       </div>
-    </nav>
+    </header>
   )
 }
