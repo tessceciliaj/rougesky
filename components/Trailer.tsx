@@ -26,6 +26,7 @@ export const Trailer = ({ content }: { content: TrailerProps }) => {
       videoId={videoId}
       opts={opts}
       onReady={onPlayerReady}
+      id='trailer'
       className='flex aspect-video max-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col justify-center pt-12 md:px-12'
     />
   )

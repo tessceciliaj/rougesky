@@ -6,7 +6,7 @@ import { description } from './sections/description'
 import { character } from './sections/character'
 import { newsletter } from './sections/newsletter'
 import { footer } from './sections/footer'
-import { button } from './components/button'
+import { button, ctas } from './components/button'
 import { imageWithAlt, svgWithAlt } from './components/image'
 
 export const schema = [
@@ -19,6 +19,7 @@ export const schema = [
   newsletter,
   footer,
   button,
+  ctas,
   imageWithAlt,
   svgWithAlt,
 ]
