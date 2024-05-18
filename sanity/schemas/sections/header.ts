@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
-import type { Button } from '../components/button'
+import type { Button, Ctas } from '../components/button'
 
 export const header = defineType({
   name: 'header_section',
@@ -9,10 +9,15 @@ export const header = defineType({
   validation: (rule) => rule.required(),
   fields: [
     defineField({
+      name: 'ctas',
+      title: 'Call to action buttons',
+      type: 'ctas',
+    }),
+    defineField({
       name: 'socials_buttons',
       title: 'Socials buttons',
       type: 'array',
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().max(4),
       of: [
         defineArrayMember({
           name: 'button',
@@ -26,4 +31,5 @@ export const header = defineType({
 
 export type Header = {
   socials_buttons: (Button & { _key: string })[]
+  ctas: Ctas
 }
