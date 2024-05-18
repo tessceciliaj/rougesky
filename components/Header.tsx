@@ -18,6 +18,7 @@ export const Header = ({ content }: { content: HeaderProps }) => {
       <div className='flex gap-2'>
         {content.socials_buttons.map(({ link, icon }) => {
           // TODO: fix this to alternate between regular button and icon button
+          // TODO: determine how many buttons can be shown
           if (!icon) return null
           return (
             <Button key={link} as={Link} href={link} variant='tertiary'>
