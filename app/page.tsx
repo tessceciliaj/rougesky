@@ -9,7 +9,11 @@ import { Footer } from '@/components/Footer'
 import type { Homepage } from '@/sanity/schemas/homepage'
 
 const getHomepage = async () => {
-  return await client.fetch(`*[_type == "homepage"][0]`)
+  return await client.fetch(
+    `*[_type == "homepage"][0]`,
+    {},
+    { next: { revalidate: 60 * 15 } }, // cache for 15 minutes
+  )
 }
 
 export default async function Home() {
