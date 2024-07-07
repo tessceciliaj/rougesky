@@ -6,7 +6,7 @@ import type { Newsletter as NewsletterProps } from '@/sanity/schemas/sections/ne
 
 export const JoinNow = ({ content }: { content: NewsletterProps }) => {
   return (
-    <section className='mx-auto w-full bg-[#00417D] py-20'>
+    <section className='mx-auto w-full bg-[#00417D] py-20 bg-[url("/images/gradient.png")] bg-cover bg-center text-center '>
       <div className='flex flex-col items-center gap-6 p-6'>
         <h2 className='text-light text-center font-title text-6xl'>
           {content.title}
