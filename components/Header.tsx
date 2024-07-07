@@ -7,7 +7,7 @@ import type { Header as HeaderProps } from '@/sanity/schemas/sections/header'
 
 export const Header = ({ content }: { content: HeaderProps }) => {
   return (
-    <header className='bg-dark/50 absolute z-50 flex h-20 w-full items-center justify-between gap-6 px-4'>
+    <header className='bg-dark/50 sticky top-0 z-50 flex h-20 w-full items-center justify-between gap-6 px-4'>
       <div className='flex gap-2'>
         <Ctas ctas={content.ctas} />
       </div>
