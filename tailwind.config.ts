@@ -13,7 +13,7 @@ const config: Config = {
     },
     colors: {
       light: '#FFFFFF',
-      dark: '#0E0E0E',
+      dark: '#000000',
       primary: '#00FFFF',
     },
   },
